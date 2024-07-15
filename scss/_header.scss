@@ -1,0 +1,57 @@
+.header {
+    @include flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 7.1rem;
+    column-gap:2rem;
+    &__burger {
+        display: none;
+        span {
+            display: inline-block;
+            width: 3rem;
+            height: 0.2rem;
+            background-color: $color-white;
+        }
+    }
+    &__buttons {
+        @include flex;
+        justify-content: space-between;
+        column-gap: 2rem;
+    }
+    &__buttons--login {
+        color:$color-grey;
+        background-color: transparent;
+    }
+    &__buttons--signup {
+        color:$color-dark;
+        background-color:$color-white;
+        border-radius: 3.2rem;
+        padding: 0.8rem 2rem;
+        &:is(:hover :focus) {
+            background-color: $color-blue;
+            color:$color-white;
+        }
+    }
+}
+
+.nav {
+   @include flex;
+    gap: 3rem;
+    &__logo {
+        vertical-align: bottom;
+        width: 9.7rem;
+        height: 3rem;
+    }
+    &__items {
+        @include flex;
+        column-gap: 2rem;
+        list-style: none;
+    }
+    &__link {
+        display: inline-block;
+        color:$color-grey;
+        &:hover {
+            color:$color-white;
+        }
+    }
+}

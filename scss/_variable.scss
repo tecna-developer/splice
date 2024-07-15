@@ -3,3 +3,8 @@ $color-grey:#A6A8AD;
 $color-blue:#0033FF;
 $color-white: #fff;
 $color-black: #000;
+
+@mixin flex {
+    display: flex;
+    align-items:center
+}

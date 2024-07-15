@@ -1,0 +1,23 @@
+@media (width <= 800px) {
+    .header {
+        justify-content: space-around;
+        row-gap: 2rem;
+    }    
+}
+@media (width<680px) {
+    .header {
+        height: 8rem;
+        &__burger {
+            display: block;
+            @include flex;
+            flex-direction: column;
+            row-gap: 1rem;
+        }
+    }
+    .nav {
+        &__items {
+            display: none;
+        }
+    }
+    
+}
