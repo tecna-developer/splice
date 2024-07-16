@@ -8,3 +8,8 @@ $color-black: #000;
     display: flex;
     align-items:center
 }
+@mixin link {
+    background-color:$color-blue;
+    padding: 0.8rem 2rem;
+    border-radius: .8rem;
+}

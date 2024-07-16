@@ -1,0 +1,21 @@
+.today {
+    height: 73rem;
+    background: url(/images/section4_bg.png) center / cover, no-repeat;
+    @include flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+    &__title {
+        font-size: clamp(3rem, 1.8rem + 4.8vw, 5.4rem);
+        font-weight: 400;
+        line-height: 6rem;
+    }
+    &__link {
+        @include link;
+        opacity: .7;
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+}

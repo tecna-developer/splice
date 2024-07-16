@@ -219,7 +219,7 @@ button {
 }
 
 .always {
-  padding: 3rem 0;
+  padding: 9rem 0;
 }
 .always__title {
   font-size: clamp(1.6rem, 1rem + 2.4vw, 2.8rem);
@@ -264,6 +264,66 @@ button {
   font-size: 1.4rem;
   line-height: 2rem;
   font-weight: 400;
+}
+
+.today {
+  height: 73rem;
+  background: url(/images/section4_bg.png) center/cover, no-repeat;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5rem;
+}
+.today__title {
+  font-size: clamp(3rem, 1.8rem + 4.8vw, 5.4rem);
+  font-weight: 400;
+  line-height: 6rem;
+}
+.today__link {
+  background-color: #0033ff;
+  padding: 0.8rem 2rem;
+  border-radius: 0.8rem;
+  opacity: 0.7;
+}
+.today__link:hover {
+  opacity: 1;
+}
+
+.footer {
+  padding: 5rem 0;
+}
+.footer__nav {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-bottom: 8rem;
+}
+.footer__nav--links {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 2.4rem;
+  flex-wrap: wrap;
+}
+.footer__block--link {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.1rem;
+}
+.footer__link {
+  color: #A6A8AD;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+.footer__link-1 {
+  color: #fff;
+  font-size: 2rem;
+}
+.footer__link-bt {
+  margin-bottom: 2rem;
 }
 
 @media (width <= 800px) {
@@ -311,5 +371,8 @@ button {
   }
   .always__cards {
     grid-template-columns: repeat(auto-fit, minmax(36.1rem, 1fr));
+  }
+  .today {
+    height: 40.5rem;
   }
 }/*# sourceMappingURL=style.css.map */
