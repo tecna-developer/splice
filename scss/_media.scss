@@ -3,6 +3,17 @@
         justify-content: space-around;
         row-gap: 2rem;
         height: 8rem;
+    }
+    .catalog {
+        &__title {
+            font-weight: 600;
+        }
+    }
+    .always {
+        &__title {
+            text-align: center;
+            font-weight: 600;
+        }
     }    
 }
 @media (width < 686px) {
@@ -38,5 +49,11 @@
             display: none;
         }
     }
+    .always {
+        &__cards {
+            grid-template-columns: repeat(auto-fit, minmax(36.1rem, 1fr));
+        }
+    }
+    
     
 }
