@@ -20,7 +20,11 @@
     }
     &__buttons--login {
         color:$color-grey;
+        line-height: 2rem;
         background-color: transparent;
+        &:hover {
+            color:$color-white;
+        }
     }
     &__buttons--signup {
         color:$color-dark;
@@ -50,6 +54,7 @@
     &__link {
         display: inline-block;
         color:$color-grey;
+        line-height: 2rem;
         &:hover {
             color:$color-white;
         }
