@@ -20,7 +20,11 @@
         flex-direction: column;
         gap: 3rem;
         border-radius: .8rem;
-    }
+        &:hover {
+            background-color: $color-black;
+            color:$color-white;
+        }
+    }  
     &__images {
     max-width: 22.3rem;
     max-height: 22.3rem;

@@ -15,6 +15,7 @@ body {
   line-height: 2.4rem;
   background-color: #121214;
   color: #fff;
+  min-height: 100dvh;
 }
 
 a {
@@ -161,11 +162,23 @@ button {
   opacity: 0.7;
   padding: 1.6rem 3.2rem;
   border-radius: 0.8rem;
+  transition: all 2s ease-in-out;
+  animation: slideIn 3s infinite;
 }
 .producer__link:hover {
   opacity: 1;
 }
 
+@keyframes slideIn {
+  from {
+    transform: scaleX(0);
+    transform-origin: 100% 100%;
+  }
+  to {
+    transform: scaleX(1);
+    transform-origin: 100% 100%;
+  }
+}
 .catalog {
   display: flex;
   align-items: center;
@@ -243,6 +256,10 @@ button {
   gap: 3rem;
   border-radius: 0.8rem;
 }
+.always__card:hover {
+  background-color: #000;
+  color: #fff;
+}
 .always__images {
   max-width: 22.3rem;
   max-height: 22.3rem;
@@ -285,11 +302,30 @@ button {
   padding: 0.8rem 2rem;
   border-radius: 0.8rem;
   opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+  animation: rotate 4s linear 2s infinite;
 }
 .today__link:hover {
   opacity: 1;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(45deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(275deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .footer {
   padding: 5rem 0;
 }
@@ -360,19 +396,41 @@ button {
 }
 @media (width < 576px) {
   .header__burger {
-    display: block;
     display: flex;
     align-items: center;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 0.8rem;
+    position: relative;
+    z-index: 11;
   }
   .nav__items {
-    display: none;
+    transform: translateX(-110%);
+    top: 13.8rem;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 11;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+    background-color: #121214;
+    width: 100dvw;
+    padding: 2.5rem 0;
+  }
+  .active {
+    transform: translateX(0);
   }
   .always__cards {
     grid-template-columns: repeat(auto-fit, minmax(36.1rem, 1fr));
   }
   .today {
     height: 40.5rem;
+  }
+  .footer__nav {
+    flex-direction: column;
+  }
+  .footer__nav--links {
+    justify-content: center;
   }
 }/*# sourceMappingURL=style.css.map */

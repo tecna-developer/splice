@@ -13,9 +13,29 @@
     &__link {
         @include link;
         opacity: .7;
+        transition: all .3s ease-in-out;
+        animation: rotate 4s linear 2s infinite;
         &:hover {
             opacity: 1;
         }
+    }
+
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(45deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(275deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 
 }
